@@ -19,6 +19,9 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 public abstract class AbstractControls {
 
+    //控件id
+    private Integer id;
+
     /** 标题*/
     @NotNull(message = "标题不能为空")
     @Max(value = 10,message = "最多10个字")
@@ -30,8 +33,6 @@ public abstract class AbstractControls {
 
     /** 是否为必填项*/
     private boolean required;
-
-
 
 
 }
