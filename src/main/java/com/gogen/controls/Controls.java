@@ -1,5 +1,6 @@
 package com.gogen.controls;
 
+import com.gogen.constant.MongoCollectionNamespace;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,17 +10,20 @@ import javax.persistence.Id;
 
 /**
  *
+ *  控件名称
  *
  * @author Yuanwei.Liang
  * @date 17/2/17
  */
+
 @Getter
 @Setter
 @NoArgsConstructor
-@Document(collection = "workflow_controls_def")
+@Document(collection = MongoCollectionNamespace.controls)
 public class Controls {
 
-
+    @Id
+    private String ObjectId;
 
     private String name;
     private String icon;
