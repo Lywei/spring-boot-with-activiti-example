@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 
 /**
  *
- *  控件
+ *  控件定义
  *
  * @author Yuanwei.Liang
  * @date 17/2/17
@@ -17,7 +17,11 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @NoArgsConstructor
-public abstract class AbstractControls {
+public abstract class AbstractControlsDefinition {
+
+
+    private final String _defaultTitleStr="";
+
 
     //控件id
     private Integer id;
@@ -28,7 +32,7 @@ public abstract class AbstractControls {
     private String title;
 
     /** 标题提示*/
-    @Max(value = 20,message = "最多10个字")
+    @Max(value = 10,message = "最多10个字")
     private String titleTips;
 
     /** 是否为必填项*/
