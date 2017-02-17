@@ -9,5 +9,5 @@ package com.gogen.constant;
  */
 public interface MongoCollectionNamespace {
 
-    public final static String controls="workflow_controls_def";
+    public final static String _controls="workflow_controls_def";
 }

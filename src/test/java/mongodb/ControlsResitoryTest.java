@@ -26,6 +26,6 @@ public class ControlsResitoryTest {
 
     @Test
     public void testSave(){
-        controlsRepository.save(new Controls("单选框","http://www.baidu.com"));
+//        controlsRepository.save(new Controls("单选框","http://www.baidu.com"));
     }
 }

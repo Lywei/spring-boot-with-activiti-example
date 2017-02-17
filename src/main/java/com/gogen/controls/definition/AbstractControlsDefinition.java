@@ -1,4 +1,4 @@
-package com.gogen.controls;
+package com.gogen.controls.definition;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,24 +19,28 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 public abstract class AbstractControlsDefinition {
 
-
-    private final String _defaultTitleStr="";
-
+    private final String defaultTitle="标题";
+    private final String defaultTitleTips="请输入";
 
     //控件id
-    private Integer id;
+    protected Integer id;
+
+    //controls code
+    protected String code;
 
     /** 标题*/
     @NotNull(message = "标题不能为空")
     @Max(value = 10,message = "最多10个字")
-    private String title;
+    protected String title=defaultTitle;
 
     /** 标题提示*/
     @Max(value = 10,message = "最多10个字")
-    private String titleTips;
+    protected String titleTips=defaultTitleTips;
 
     /** 是否为必填项*/
-    private boolean required;
+    protected boolean required;
 
+    /** 是否有输入提示*/
+    protected boolean needTitleTips;
 
 }

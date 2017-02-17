@@ -1,4 +1,4 @@
-package com.gogen.controls;
+package com.gogen.controls.definition;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -34,6 +34,7 @@ public class ControlsDefinition {
                 controlsMap.put("DoubleSelect","多选框");
                 controlsMap.put("Date","日期");
                 controlsMap.put("DateTime","日期区间");
+                controlsMap.put("Button","按钮");
     }
 
 
